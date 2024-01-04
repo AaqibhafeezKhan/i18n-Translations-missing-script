@@ -30,3 +30,5 @@ The scope of the script is to identify if the project has missed traslations. Mi
   "dashboard.welcome": "welcome",
   ...
 }
+In this case, "dashboard.welcome" has only english translation repeated in all languages. Missed.
+
