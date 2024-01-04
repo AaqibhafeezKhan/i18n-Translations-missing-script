@@ -6,29 +6,29 @@ The scope of the script is to identify if the project has missed traslations. Mi
 // en.json
 {
   ...
-  "dashboard.welcome": "welcome",
+  "Input.welcome": "welcome",
   ...
 }
 
 // de.json
 {
   ...
-  "dashboard.welcome": "welcome",
+  "Input.welcome": "welcome",
   ...
 }
 
 // fr.json
 {
   ...
-  "dashboard.welcome": "welcome",
+  "Input.welcome": "welcome",
   ...
 }
 
 // it.json
 {
   ...
-  "dashboard.welcome": "welcome",
+  "Input.welcome": "welcome",
   ...
 }
-In this case, "dashboard.welcome" has only english translation repeated in all languages. Missed.
+In this case, "Input.welcome" has only english translation repeated in all languages. Missed.
 
