@@ -36,3 +36,6 @@ replace const pathToI18n const in src/index.ts with path to src/assets/i18n in y
 install dependencies with npm i.
 launch script with npm start.
 After npm start script is launched, it will create missed-translations.json file with all missed translations.
+
+Notes
+Since some words translated the same in all languages in project (like "Ok"), it will be handful to create white list for such cases.
