@@ -1,0 +1,21 @@
+node_modules/
+dist/
+*.js.map
+*.d.ts
+*.d.ts.map
+
+# Output reports (keep sample report out of git)
+missed-translations.json
+sample/missed-translations.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/settings.json
+.idea/
+*.swp
+
+# Logs
+npm-debug.log*
