@@ -1,0 +1,94 @@
+name: i18n Missing Translations Check
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - 'src/**'
+      - 'sample/**'
+      - 'package.json'
+      - 'tsconfig.json'
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  build-and-check:
+    name: Build & Run Translation Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ⬇️ Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 🔍 TypeScript type-check
+        run: npm run lint
+
+      - name: 🏗️ Build
+        run: npm run build
+
+      - name: 🌐 Run against sample data
+        run: |
+          node dist/index.js \
+            --path ./sample/i18n \
+            --whitelist ./sample/whitelist.json \
+            --output ./sample/missed-translations.json \
+            --verbose
+        continue-on-error: true   # sample intentionally has missed keys
+
+      - name: 📊 Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: missed-translations-report
+          path: sample/missed-translations.json
+          if-no-files-found: warn
+
+  deploy-pages:
+    name: Deploy GitHub Pages
+    needs: build-and-check
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    permissions:
+      contents: write
+
+    steps:
+      - name: ⬇️ Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 🌐 Generate live sample report for Pages
+        run: |
+          node -e "
+          const { execSync } = require('child_process');
+          try {
+            execSync('npm run build', { stdio: 'inherit' });
+            execSync('node dist/index.js --path ./sample/i18n --whitelist ./sample/whitelist.json --output ./docs/sample-report.json --verbose', { stdio: 'inherit' });
+          } catch(e) { /* missed keys exit 1 — that's ok */ }
+          "
+        continue-on-error: true
+
+      - name: 🚀 Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: 'deploy: update GitHub Pages [skip ci]'
