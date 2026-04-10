@@ -1,0 +1,62 @@
+{
+  "generatedAt": "2026-04-10T13:02:00.448Z",
+  "i18nPath": "/home/runner/work/i18n-Translations-missing-script/i18n-Translations-missing-script/docs/sample-report.json",
+  "languages": [
+    "en",
+    "de",
+    "fr",
+    "it"
+  ],
+  "baseLanguage": "en",
+  "totalKeys": 25,
+  "missedCount": 6,
+  "whitelistedCount": 6,
+  "missed": [
+    {
+      "key": "nav.home",
+      "value": "Home",
+      "languages": [
+        "it"
+      ]
+    },
+    {
+      "key": "nav.contact",
+      "value": "Contact",
+      "languages": [
+        "fr"
+      ]
+    },
+    {
+      "key": "form.password",
+      "value": "Password",
+      "languages": [
+        "it"
+      ]
+    },
+    {
+      "key": "msg.error",
+      "value": "Something went wrong. Please try again.",
+      "languages": [
+        "de",
+        "fr",
+        "it"
+      ]
+    },
+    {
+      "key": "msg.not_found",
+      "value": "Page not found.",
+      "languages": [
+        "fr"
+      ]
+    },
+    {
+      "key": "Input.welcome",
+      "value": "welcome",
+      "languages": [
+        "de",
+        "fr",
+        "it"
+      ]
+    }
+  ]
+}
