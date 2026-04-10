@@ -206,7 +206,9 @@ async function run(): Promise<void> {
   );
   const verbose = Boolean(args["verbose"]);
 
-  console.log(`  📂  i18n path  : ${i18nPath}`);
+  console.log(
+    `  📂  i18n path  : ${path.relative(process.cwd(), i18nPath).replace(/\\/g, "/")}`,
+  );
   console.log(`  🌐  Languages  : ${languages.join(", ")}`);
   console.log(`  🔑  Base lang  : ${baseLang}\n`);
 
@@ -233,7 +235,7 @@ async function run(): Promise<void> {
 
   const report: Report = {
     generatedAt: new Date().toISOString(),
-    i18nPath: outputPath,
+    i18nPath: path.relative(process.cwd(), outputPath).replace(/\\/g, "/"),
     languages,
     baseLanguage: baseLang,
     totalKeys: Object.keys(baseMap).length,
