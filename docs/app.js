@@ -34,17 +34,21 @@ function runDemo() {
   const enRaw = document.getElementById('editor-en').value;
   const deRaw = document.getElementById('editor-de').value;
   const frRaw = document.getElementById('editor-fr').value;
+  const itRaw = document.getElementById('editor-it').value;
+  const esRaw = document.getElementById('editor-es').value;
   const whitelistRaw = document.getElementById('whitelist-input').value;
 
   const en = parseJSON(enRaw);
   const de = parseJSON(deRaw);
   const fr = parseJSON(frRaw);
+  const it = parseJSON(itRaw);
+  const es = parseJSON(esRaw);
 
   const resultsEl = document.getElementById('demo-results');
   const bodyEl    = document.getElementById('results-body');
   const badgeEl   = document.getElementById('results-badge');
 
-  if (!en || !de || !fr) {
+  if (!en || !de || !fr || !it || !es) {
     bodyEl.innerHTML = '<p style="color:#ff6b6b;font-size:0.9rem;">⚠️  One or more JSON files are invalid. Check your syntax.</p>';
     resultsEl.classList.remove('hidden');
     badgeEl.textContent = 'JSON Error';
@@ -56,7 +60,7 @@ function runDemo() {
     whitelistRaw.split(',').map(k => k.trim()).filter(Boolean)
   );
 
-  const translations = { en, de, fr };
+  const translations = { en, de, fr, it, es };
   const missed = detectMissed(translations, 'en', whitelist);
 
   const totalKeys = Object.keys(en).length;
