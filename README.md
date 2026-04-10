@@ -34,14 +34,14 @@ every `<lang>.json` file in your i18n folder and surfaces exactly those keys.
 
 ## Features
 
-| Feature | Details |
-|---|---|
-| ⚡ **Zero config** | Works out-of-the-box — just point it at your i18n folder |
-| 🌐 **Any languages** | Pass any comma-separated list of codes via `--langs` |
-| 📋 **Whitelist support** | Exclude keys like "Ok" that are intentionally identical |
-| 📊 **Structured JSON report** | Stats + per-key details written to a report file |
-| 🚦 **CI-ready exit code** | Exits `1` when issues are found — blocks broken deployments |
-| 🎨 **Colourised output** | Beautiful terminal output with summary table |
+| Feature                       | Details                                                     |
+| ----------------------------- | ----------------------------------------------------------- |
+| ⚡ **Zero config**            | Works out-of-the-box — just point it at your i18n folder    |
+| 🌐 **Any languages**          | Pass any comma-separated list of codes via `--langs`        |
+| 📋 **Whitelist support**      | Exclude keys like "Ok" that are intentionally identical     |
+| 📊 **Structured JSON report** | Stats + per-key details written to a report file            |
+| 🚦 **CI-ready exit code**     | Exits `1` when issues are found — blocks broken deployments |
+| 🎨 **Colourised output**      | Beautiful terminal output with summary table                |
 
 ---
 
@@ -177,13 +177,13 @@ CI check automatically.
 
 ## Scripts
 
-| Command | Description |
-|---|---|
-| `npm run sample` | Run the tool against the built-in sample data |
-| `npm run dev` | Run in watch mode (auto-restarts on file change) |
-| `npm run build` | Compile TypeScript to `dist/` |
-| `npm run lint` | TypeScript type-check without emitting |
-| `npm run check` | Single run of the script |
+| Command          | Description                                      |
+| ---------------- | ------------------------------------------------ |
+| `npm run sample` | Run the tool against the built-in sample data    |
+| `npm run dev`    | Run in watch mode (auto-restarts on file change) |
+| `npm run build`  | Compile TypeScript to `dist/`                    |
+| `npm run lint`   | TypeScript type-check without emitting           |
+| `npm run check`  | Single run of the script                         |
 
 ---
 

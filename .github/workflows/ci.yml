@@ -4,10 +4,10 @@ on:
   push:
     branches: [main, master]
     paths:
-      - 'src/**'
-      - 'sample/**'
-      - 'package.json'
-      - 'tsconfig.json'
+      - "src/**"
+      - "sample/**"
+      - "package.json"
+      - "tsconfig.json"
   pull_request:
     branches: [main, master]
   workflow_dispatch:
@@ -24,8 +24,8 @@ jobs:
       - name: 🟢 Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: "20"
+          cache: "npm"
 
       - name: 📦 Install dependencies
         run: npm ci
@@ -43,7 +43,7 @@ jobs:
             --whitelist ./sample/whitelist.json \
             --output ./sample/missed-translations.json \
             --verbose
-        continue-on-error: true   # sample intentionally has missed keys
+        continue-on-error: true # sample intentionally has missed keys
 
       - name: 📊 Upload report artifact
         uses: actions/upload-artifact@v4
@@ -67,8 +67,8 @@ jobs:
       - name: 🟢 Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: "20"
+          cache: "npm"
 
       - name: 📦 Install dependencies
         run: npm ci
@@ -89,6 +89,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
-          commit_message: 'deploy: update GitHub Pages [skip ci]'
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
+          commit_message: "deploy: update GitHub Pages [skip ci]"

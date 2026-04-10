@@ -1,8 +1,1 @@
-[
-  "btn.ok",
-  "btn.yes",
-  "btn.no",
-  "form.name",
-  "form.email",
-  "msg.loading"
-]
+["btn.ok", "btn.yes", "btn.no", "form.name", "form.email", "msg.loading"]
