@@ -1,58 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>i18n Missing Translations Detector</title>
-  <meta name="description" content="A powerful CLI tool to detect untranslated i18n keys across multiple language files. Catch missing translations before they reach production." />
-  <meta name="keywords" content="i18n, internationalization, translation, missing translations, localization, CLI, TypeScript" />
-  <meta property="og:title" content="i18n Missing Translations Detector" />
-  <meta property="og:description" content="Detect untranslated i18n keys across multiple language files with one command." />
-  <meta property="og:type" content="website" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <!-- ── Hero ──────────────────────────────────────────────────── -->
-  <header class="hero">
-    <nav class="nav container">
-      <div class="nav-brand">
-        <span class="nav-icon">🌐</span>
-        <span class="nav-title">i18n-check</span>
-      </div>
-      <div class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#demo">Demo</a>
-        <a href="#usage">Usage</a>
-        <a href="https://github.com/AaqibhafeezKhan/i18n-Translations-missing-script" target="_blank" rel="noopener" class="btn-outline">GitHub ↗</a>
-      </div>
-    </nav>
-
-    <div class="hero-body container">
-      <div class="badge-row">
-        <span class="badge">TypeScript</span>
-        <span class="badge badge-green">v2.0.0</span>
-        <span class="badge badge-purple">CLI Tool</span>
-      </div>
-      <h1>Catch Missing <span class="gradient-text">Translations</span><br />Before They Reach Production</h1>
-      <p class="hero-subtitle">
-        A zero-config CLI tool that scans your i18n JSON files and surfaces every key
-        that has been left untranslated — complete with whitelist support, colorised
-        output, and CI-ready exit codes.
-      </p>
-      <div class="hero-actions">
-        <a href="#usage" class="btn-primary">Get Started →</a>
-        <a href="#demo" class="btn-ghost">View Live Demo</a>
-      </div>
-      <div class="terminal-preview">
-        <div class="terminal-bar">
-          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-          <span class="terminal-title">bash</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>i18n Missing Translations Detector</title>
+    <meta
+      name="description"
+      content="A powerful CLI tool to detect untranslated i18n keys across multiple language files. Catch missing translations before they reach production."
+    />
+    <meta
+      name="keywords"
+      content="i18n, internationalization, translation, missing translations, localization, CLI, TypeScript"
+    />
+    <meta property="og:title" content="i18n Missing Translations Detector" />
+    <meta
+      property="og:description"
+      content="Detect untranslated i18n keys across multiple language files with one command."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav container">
+        <div class="nav-brand">
+          <span class="nav-icon">🌐</span>
+          <span class="nav-title">i18n-check</span>
         </div>
-        <pre class="terminal-body"><span class="t-dim">$</span> npm run sample
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#demo">Demo</a>
+          <a href="#usage">Usage</a>
+          <a
+            href="https://github.com/AaqibhafeezKhan/i18n-Translations-missing-script"
+            target="_blank"
+            rel="noopener"
+            class="btn-outline"
+            >GitHub ↗</a
+          >
+        </div>
+      </nav>
+
+      <div class="hero-body container">
+        <div class="badge-row">
+          <span class="badge">TypeScript</span>
+          <span class="badge badge-green">v2.0.0</span>
+          <span class="badge badge-purple">CLI Tool</span>
+        </div>
+        <h1>
+          Catch Missing <span class="gradient-text">Translations</span
+          ><br />Before They Reach Production
+        </h1>
+        <p class="hero-subtitle">
+          A zero-config CLI tool that scans your i18n JSON files and surfaces
+          every key that has been left untranslated — complete with whitelist
+          support, colorised output, and CI-ready exit codes.
+        </p>
+        <div class="hero-actions">
+          <a href="#usage" class="btn-primary">Get Started →</a>
+          <a href="#demo" class="btn-ghost">View Live Demo</a>
+        </div>
+        <div class="terminal-preview">
+          <div class="terminal-bar">
+            <span class="dot red"></span><span class="dot yellow"></span
+            ><span class="dot green"></span>
+            <span class="terminal-title">bash</span>
+          </div>
+          <pre class="terminal-body"><span class="t-dim">$</span> npm run sample
 
 <span class="t-cyan">╔══════════════════════════════════════════════════════════╗
 ║       i18n Missing Translations Detector  v2.0.0        ║
@@ -73,236 +93,414 @@
   Total keys        : 25
   Whitelisted       : <span class="t-yellow">6</span>
   Missing           : <span class="t-red">3</span> (12.0%)</pre>
-      </div>
-    </div>
-  </header>
-
-  <!-- ── Features ───────────────────────────────────────────────── -->
-  <section id="features" class="section">
-    <div class="container">
-      <div class="section-label">Features</div>
-      <h2 class="section-title">Everything you need to<br />keep your app fully translated</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">⚡</div>
-          <h3>Zero Config</h3>
-          <p>Point it at your i18n folder and it works. Sane defaults for the most common setups.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🗂️</div>
-          <h3>Any Languages</h3>
-          <p>Not locked to EN/DE/FR/IT. Pass any comma-separated list of language codes via <code>--langs</code>.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📋</div>
-          <h3>Whitelist Support</h3>
-          <p>Some words like "Ok" are identical in every language. Exclude them with a simple JSON whitelist.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📊</div>
-          <h3>Structured Report</h3>
-          <p>Outputs a full JSON report with stats: total keys, missed count, percentage, and per-key details.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🚦</div>
-          <h3>CI-Ready Exit Code</h3>
-          <p>Exits with code <code>1</code> when missed translations are found — plug straight into any pipeline.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🎨</div>
-          <h3>Colourised Output</h3>
-          <p>Beautiful terminal output with per-key feedback, language details, and a clean summary table.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- ── Live Demo ──────────────────────────────────────────────── -->
-  <section id="demo" class="section section-dark">
-    <div class="container">
-      <div class="section-label">Live Demo</div>
-      <h2 class="section-title">Try it in your browser</h2>
-      <p class="section-sub">Paste or edit translation JSON below and see which keys are missing instantly.</p>
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-label">Features</div>
+        <h2 class="section-title">
+          Everything you need to<br />keep your app fully translated
+        </h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Zero Config</h3>
+            <p>
+              Point it at your i18n folder and it works. Sane defaults for the
+              most common setups.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🗂️</div>
+            <h3>Any Languages</h3>
+            <p>
+              Not locked to EN/DE/FR/IT. Pass any comma-separated list of
+              language codes via <code>--langs</code>.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📋</div>
+            <h3>Whitelist Support</h3>
+            <p>
+              Some words like "Ok" are identical in every language. Exclude them
+              with a simple JSON whitelist.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Structured Report</h3>
+            <p>
+              Outputs a full JSON report with stats: total keys, missed count,
+              percentage, and per-key details.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🚦</div>
+            <h3>CI-Ready Exit Code</h3>
+            <p>
+              Exits with code <code>1</code> when missed translations are found
+              — plug straight into any pipeline.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <h3>Colourised Output</h3>
+            <p>
+              Beautiful terminal output with per-key feedback, language details,
+              and a clean summary table.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <div class="demo-layout">
-        <div class="demo-editors">
-          <div class="editor-pane">
-            <div class="editor-header">
-              <span class="lang-flag">🇬🇧</span> <strong>en.json</strong> <span class="editor-badge base">base</span>
-            </div>
-            <textarea id="editor-en" class="editor-textarea" spellcheck="false">{
+    <section id="demo" class="section section-dark">
+      <div class="container">
+        <div class="section-label">Live Demo</div>
+        <h2 class="section-title">Try it in your browser</h2>
+        <p class="section-sub">
+          Paste or edit translation JSON below and see which keys are missing
+          instantly.
+        </p>
+
+        <div class="demo-layout">
+          <div class="demo-editors">
+            <div class="editor-pane">
+              <div class="editor-header">
+                <span class="lang-flag">🇬🇧</span> <strong>en.json</strong>
+                <span class="editor-badge base">base</span>
+              </div>
+              <textarea
+                id="editor-en"
+                class="editor-textarea"
+                spellcheck="false"
+              >
+{
   "app.title": "My App",
   "btn.save": "Save",
   "btn.cancel": "Cancel",
   "msg.welcome": "Welcome!",
   "msg.error": "Something went wrong."
-}</textarea>
-          </div>
-          <div class="editor-pane">
-            <div class="editor-header">
-              <span class="lang-flag">🇩🇪</span> <strong>de.json</strong>
+}</textarea
+              >
             </div>
-            <textarea id="editor-de" class="editor-textarea" spellcheck="false">{
+            <div class="editor-pane">
+              <div class="editor-header">
+                <span class="lang-flag">🇩🇪</span> <strong>de.json</strong>
+              </div>
+              <textarea
+                id="editor-de"
+                class="editor-textarea"
+                spellcheck="false"
+              >
+{
   "app.title": "Meine App",
   "btn.save": "Speichern",
   "btn.cancel": "Cancel",
   "msg.welcome": "Willkommen!",
   "msg.error": "Something went wrong."
-}</textarea>
-          </div>
-          <div class="editor-pane">
-            <div class="editor-header">
-              <span class="lang-flag">🇫🇷</span> <strong>fr.json</strong>
+}</textarea
+              >
             </div>
-            <textarea id="editor-fr" class="editor-textarea" spellcheck="false">{
+            <div class="editor-pane">
+              <div class="editor-header">
+                <span class="lang-flag">🇫🇷</span> <strong>fr.json</strong>
+              </div>
+              <textarea
+                id="editor-fr"
+                class="editor-textarea"
+                spellcheck="false"
+              >
+{
   "app.title": "Mon Application",
   "btn.save": "Enregistrer",
   "btn.cancel": "Annuler",
   "msg.welcome": "Bienvenue!",
   "msg.error": "Something went wrong."
-}</textarea>
-          </div>
-          <div class="editor-pane">
-            <div class="editor-header">
-              <span class="lang-flag">🇮🇹</span> <strong>it.json</strong>
+}</textarea
+              >
             </div>
-            <textarea id="editor-it" class="editor-textarea" spellcheck="false">{
+            <div class="editor-pane">
+              <div class="editor-header">
+                <span class="lang-flag">🇮🇹</span> <strong>it.json</strong>
+              </div>
+              <textarea
+                id="editor-it"
+                class="editor-textarea"
+                spellcheck="false"
+              >
+{
   "app.title": "La Mia App",
   "btn.save": "Salva",
   "btn.cancel": "Annulla",
   "msg.welcome": "Bentornato!",
   "msg.error": "Something went wrong."
-}</textarea>
-          </div>
-          <div class="editor-pane">
-            <div class="editor-header">
-              <span class="lang-flag">🇪🇸</span> <strong>es.json</strong>
+}</textarea
+              >
             </div>
-            <textarea id="editor-es" class="editor-textarea" spellcheck="false">{
+            <div class="editor-pane">
+              <div class="editor-header">
+                <span class="lang-flag">🇪🇸</span> <strong>es.json</strong>
+              </div>
+              <textarea
+                id="editor-es"
+                class="editor-textarea"
+                spellcheck="false"
+              >
+{
   "app.title": "Mi Aplicación",
   "btn.save": "Guardar",
   "btn.cancel": "Cancelar",
   "msg.welcome": "¡Bienvenido!",
   "msg.error": "Something went wrong."
-}</textarea>
+}</textarea
+              >
+            </div>
+            <div class="editor-pane">
+              <div class="editor-header">
+                <span class="lang-flag">🇵🇹</span> <strong>pt.json</strong>
+              </div>
+              <textarea
+                id="editor-pt"
+                class="editor-textarea"
+                spellcheck="false"
+              >
+{
+  "app.title": "Minha Aplicação",
+  "btn.save": "Salvar",
+  "btn.cancel": "Cancelar",
+  "msg.welcome": "Bem-vindo!",
+  "msg.error": "Something went wrong."
+}</textarea
+              >
+            </div>
+            <div class="editor-pane">
+              <div class="editor-header">
+                <span class="lang-flag">🇳🇱</span> <strong>nl.json</strong>
+              </div>
+              <textarea
+                id="editor-nl"
+                class="editor-textarea"
+                spellcheck="false"
+              >
+{
+  "app.title": "Mijn App",
+  "btn.save": "Opslaan",
+  "btn.cancel": "Annuleren",
+  "msg.welcome": "Welkom!",
+  "msg.error": "Something went wrong."
+}</textarea
+              >
+            </div>
+            <div class="editor-pane">
+              <div class="editor-header">
+                <span class="lang-flag">🇯🇵</span> <strong>ja.json</strong>
+              </div>
+              <textarea
+                id="editor-ja"
+                class="editor-textarea"
+                spellcheck="false"
+              >
+{
+  "app.title": "私のアプリ",
+  "btn.save": "保存",
+  "btn.cancel": "キャンセル",
+  "msg.welcome": "ようこそ!",
+  "msg.error": "Something went wrong."
+}</textarea
+              >
+            </div>
+            <div class="editor-pane">
+              <div class="editor-header">
+                <span class="lang-flag">🇨🇳</span> <strong>zh.json</strong>
+              </div>
+              <textarea
+                id="editor-zh"
+                class="editor-textarea"
+                spellcheck="false"
+              >
+{
+  "app.title": "我的应用",
+  "btn.save": "保存",
+  "btn.cancel": "取消",
+  "msg.welcome": "欢迎!",
+  "msg.error": "Something went wrong."
+}</textarea
+              >
+            </div>
           </div>
-        </div>
 
-        <div class="demo-controls">
-          <label class="whitelist-label">
-            Whitelist (comma-separated keys to ignore):
-            <input id="whitelist-input" type="text" class="whitelist-input" placeholder="e.g. btn.ok, form.name" />
-          </label>
-          <button id="run-btn" class="btn-primary btn-full" onclick="runDemo()">
-            🔍 Run Check
-          </button>
-        </div>
-
-        <div id="demo-results" class="demo-results hidden">
-          <div class="results-header">
-            <h3>Results</h3>
-            <div id="results-badge" class="results-badge"></div>
+          <div class="demo-controls">
+            <label class="whitelist-label">
+              Whitelist (comma-separated keys to ignore):
+              <input
+                id="whitelist-input"
+                type="text"
+                class="whitelist-input"
+                placeholder="e.g. btn.ok, form.name"
+              />
+            </label>
+            <button
+              id="run-btn"
+              class="btn-primary btn-full"
+              onclick="runDemo()"
+            >
+              🔍 Run Check
+            </button>
           </div>
-          <div id="results-body"></div>
+
+          <div id="demo-results" class="demo-results hidden">
+            <div class="results-header">
+              <h3>Results</h3>
+              <div id="results-badge" class="results-badge"></div>
+            </div>
+            <div id="results-body"></div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ── Usage ──────────────────────────────────────────────────── -->
-  <section id="usage" class="section">
-    <div class="container">
-      <div class="section-label">Usage</div>
-      <h2 class="section-title">Up and running in seconds</h2>
+    <section id="usage" class="section">
+      <div class="container">
+        <div class="section-label">Usage</div>
+        <h2 class="section-title">Up and running in seconds</h2>
 
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">01</div>
-          <div class="step-content">
-            <h3>Clone & Install</h3>
-            <div class="code-block">
-              <div class="code-header">bash</div>
-              <pre>git clone https://github.com/AaqibhafeezKhan/i18n-Translations-missing-script.git
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>Clone & Install</h3>
+              <div class="code-block">
+                <div class="code-header">bash</div>
+                <pre>
+git clone https://github.com/AaqibhafeezKhan/i18n-Translations-missing-script.git
 cd i18n-Translations-missing-script
-npm install</pre>
+npm install</pre
+                >
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="step">
-          <div class="step-num">02</div>
-          <div class="step-content">
-            <h3>Run against sample data</h3>
-            <div class="code-block">
-              <div class="code-header">bash</div>
-              <pre>npm run sample</pre>
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>Run against sample data</h3>
+              <div class="code-block">
+                <div class="code-header">bash</div>
+                <pre>npm run sample</pre>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="step">
-          <div class="step-num">03</div>
-          <div class="step-content">
-            <h3>Point at your project</h3>
-            <div class="code-block">
-              <div class="code-header">bash</div>
-              <pre>npx ts-node ./src/index.ts \
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>Point at your project</h3>
+              <div class="code-block">
+                <div class="code-header">bash</div>
+                <pre>
+npx ts-node ./src/index.ts \
   --path ./src/assets/i18n \
   --langs en,de,fr,it,es \
   --whitelist ./whitelist.json \
   --output ./reports/missed.json \
-  --verbose</pre>
+  --verbose</pre
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h3>Add to your CI pipeline</h3>
+              <div class="code-block">
+                <div class="code-header">yaml — .github/workflows/ci.yml</div>
+                <pre>
+- name: Check missing translations
+  run: node dist/index.js --path ./src/assets/i18n --verbose</pre
+                >
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="step">
-          <div class="step-num">04</div>
-          <div class="step-content">
-            <h3>Add to your CI pipeline</h3>
-            <div class="code-block">
-              <div class="code-header">yaml — .github/workflows/ci.yml</div>
-              <pre>- name: Check missing translations
-  run: node dist/index.js --path ./src/assets/i18n --verbose</pre>
-            </div>
-          </div>
+        <div class="options-table-wrap">
+          <h3>CLI Options</h3>
+          <table class="options-table">
+            <thead>
+              <tr>
+                <th>Option</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>--path &lt;dir&gt;</code></td>
+                <td><code>./i18n</code></td>
+                <td>
+                  Path to folder containing <code>&lt;lang&gt;.json</code> files
+                </td>
+              </tr>
+              <tr>
+                <td><code>--langs &lt;list&gt;</code></td>
+                <td><code>en,de,fr,it</code></td>
+                <td>Comma-separated language codes to check</td>
+              </tr>
+              <tr>
+                <td><code>--base &lt;lang&gt;</code></td>
+                <td><code>en</code></td>
+                <td>Reference / base language</td>
+              </tr>
+              <tr>
+                <td><code>--whitelist &lt;file&gt;</code></td>
+                <td>—</td>
+                <td>JSON array of keys to ignore</td>
+              </tr>
+              <tr>
+                <td><code>--output &lt;file&gt;</code></td>
+                <td><code>missed-translations.json</code></td>
+                <td>Path to write the JSON report</td>
+              </tr>
+              <tr>
+                <td><code>--verbose</code></td>
+                <td>false</td>
+                <td>Print every missed key to the console</td>
+              </tr>
+              <tr>
+                <td><code>--help</code></td>
+                <td>—</td>
+                <td>Show help text</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
+    </section>
 
-      <div class="options-table-wrap">
-        <h3>CLI Options</h3>
-        <table class="options-table">
-          <thead>
-            <tr><th>Option</th><th>Default</th><th>Description</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><code>--path &lt;dir&gt;</code></td><td><code>./i18n</code></td><td>Path to folder containing <code>&lt;lang&gt;.json</code> files</td></tr>
-            <tr><td><code>--langs &lt;list&gt;</code></td><td><code>en,de,fr,it</code></td><td>Comma-separated language codes to check</td></tr>
-            <tr><td><code>--base &lt;lang&gt;</code></td><td><code>en</code></td><td>Reference / base language</td></tr>
-            <tr><td><code>--whitelist &lt;file&gt;</code></td><td>—</td><td>JSON array of keys to ignore</td></tr>
-            <tr><td><code>--output &lt;file&gt;</code></td><td><code>missed-translations.json</code></td><td>Path to write the JSON report</td></tr>
-            <tr><td><code>--verbose</code></td><td>false</td><td>Print every missed key to the console</td></tr>
-            <tr><td><code>--help</code></td><td>—</td><td>Show help text</td></tr>
-          </tbody>
-        </table>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="nav-icon">🌐</span>
+          <span class="nav-title">i18n-check</span>
+        </div>
+        <p class="footer-copy">
+          Open-source MIT — built with TypeScript &amp; ❤️
+        </p>
+        <a
+          href="https://github.com/AaqibhafeezKhan/i18n-Translations-missing-script"
+          target="_blank"
+          rel="noopener"
+          class="footer-gh"
+        >
+          View on GitHub ↗
+        </a>
       </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- ── Footer ─────────────────────────────────────────────────── -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="nav-icon">🌐</span>
-        <span class="nav-title">i18n-check</span>
-      </div>
-      <p class="footer-copy">Open-source MIT — built with TypeScript &amp; ❤️</p>
-      <a href="https://github.com/AaqibhafeezKhan/i18n-Translations-missing-script" target="_blank" rel="noopener" class="footer-gh">
-        View on GitHub ↗
-      </a>
-    </div>
-  </footer>
-
-  <script src="app.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
